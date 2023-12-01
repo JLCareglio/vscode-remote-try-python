@@ -3,11 +3,8 @@
 # Licensed under the MIT License. See LICENSE in the project root for license information.
 #-----------------------------------------------------------------------------------------
 
-from flask import Flask
 from pick import pick
 import random
-
-app = Flask(__name__)
 
 rounds = 0
 user_wins = 0
@@ -20,10 +17,6 @@ hands = [
     {"name": "🦎 Lagarto", "beat": [{"name": "🖖 Spock", "lore": "Lagarto envenena Spock"}, {"name": "📜 Papel", "lore": "Lagarto come papel"}]},
     {"name": "🖖 Spock", "beat": [{"name": "✂️ Tijera", "lore": "Spock destruye tijeras"}, {"name": "🪨 Piedra", "lore": "Spock vaporiza piedra"}]}
     ]
-
-@app.route("/")
-def hello():
-    return app.send_static_file("index.html")
 
 def menu():
     global rounds, user_wins, computer_wins
@@ -51,24 +44,23 @@ def play():
     computer_choice = random.randint(0, 4)
 
     print("\033c")
-    print("👤 Usuario: " + options[user_choice])
-    print("🤖 Computadora: " + options[computer_choice] + "\n")
+    print("👤 👉 " + options[user_choice])
+    print("🤖 👉 " + options[computer_choice] + "\n")
 
     if user_choice == computer_choice:
-        print("🤝 Empate")
+        print("🤝 Fue un empate")
     else:
         if hands[user_choice]["name"] in [beat["name"] for beat in hands[computer_choice]["beat"]]:
-            print("🤖 " + hands[computer_choice]["beat"][0]["lore"] if hands[computer_choice]["beat"][0]["name"] == hands[user_choice]["name"] else hands[computer_choice]["beat"][1]["lore"])
+            print((hands[computer_choice]["beat"][0]["lore"] if hands[computer_choice]["beat"][0]["name"] == hands[user_choice]["name"] else hands[computer_choice]["beat"][1]["lore"]) + ", gano 🤖")
             computer_wins += 1
         else:
-            print("👤 " + hands[user_choice]["beat"][0]["lore"] if hands[user_choice]["beat"][0]["name"] == hands[computer_choice]["name"] else hands[user_choice]["beat"][1]["lore"])
+            print((hands[user_choice]["beat"][0]["lore"] if hands[user_choice]["beat"][0]["name"] == hands[computer_choice]["name"] else hands[user_choice]["beat"][1]["lore"]) + ", gano 👤")
             user_wins += 1
 
     rounds += 1
-    print("\n👤 Victorias de Usuario: " + str(user_wins))
-    print("🤖 Victorias de Computadora: " + str(computer_wins))
-    print("🔢 Ronda: " + str(rounds))
-    input("Pulsa una tecla para continuar...")
+    print("\n👤🏆: " + str(user_wins) + " -|- 🤖🏆: " + str(computer_wins))
+    print("🔢 Ronda numero: " + str(rounds))
+    input("\nPulsa una tecla para continuar...")
     menu()
 
 def rules():
