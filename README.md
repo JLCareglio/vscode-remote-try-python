@@ -1,4 +1,19 @@
-# Try Out Development Containers: Python
+# Juego de Piedra, Papel, Tijera, Lagarto o Spock
+
+Juego de terminal construido con Python siguiendo el siguiente curso: [Proyecto de desafío: Crear una aplicación de consola de minijuegos con GitHub Copilot](https://learn.microsoft.com/es-es/training/modules/challenge-project-create-mini-game-with-copilot/?WT.mc_id=cloudskillschallenge_ef5f9f41-0818-4895-9217-79d19827a322)
+
+## Capturas de pantalla
+
+🚧 Subida de capturas pendiente 🚧
+
+## Primeros pasos
+
+1. Instala Python 3
+2. Instala la dependencia pick: `pip3 install pick`
+3. Ejecuta el juego: `python3 .\app.py`
+
+# README original de la plantilla usada
+## Try Out Development Containers: Python
 
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-python)
 
