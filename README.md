@@ -1,10 +1,15 @@
 # Juego de Piedra, Papel, Tijera, Lagarto o Spock
 
-Juego de terminal construido con Python siguiendo el siguiente curso: [Proyecto de desafío: Crear una aplicación de consola de minijuegos con GitHub Copilot](https://learn.microsoft.com/es-es/training/modules/challenge-project-create-mini-game-with-copilot/?WT.mc_id=cloudskillschallenge_ef5f9f41-0818-4895-9217-79d19827a322)
+Juego de terminal construido con Python siguiendo el siguiente curso:
+[Proyecto de desafío: Crear una aplicación de consola de minijuegos con GitHub Copilot](https://learn.microsoft.com/es-es/training/modules/challenge-project-create-mini-game-with-copilot/?WT.mc_id=cloudskillschallenge_ef5f9f41-0818-4895-9217-79d19827a322)
 
 ## Capturas de pantalla
 
-🚧 Subida de capturas pendiente 🚧
+![0](https://github.com/JLCareglio/vscode-remote-try-python/assets/23004689/67a037a0-0eb6-4117-9114-262010bd80ad)
+
+![1](https://github.com/JLCareglio/vscode-remote-try-python/assets/23004689/120b990f-70f2-4490-8134-16ef099c00dd)
+
+![2](https://github.com/JLCareglio/vscode-remote-try-python/assets/23004689/161847c9-2139-443a-bebe-a73a105a2fde)
 
 ## Primeros pasos
 
